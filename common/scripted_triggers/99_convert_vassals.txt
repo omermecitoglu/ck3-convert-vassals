@@ -1,0 +1,8 @@
+﻿vassal_can_be_converted = {
+	root = {
+		is_character_interaction_potentially_accepted = {
+			recipient = prev
+			interaction = demand_conversion_vassal_ruler_interaction
+		}
+	}
+}

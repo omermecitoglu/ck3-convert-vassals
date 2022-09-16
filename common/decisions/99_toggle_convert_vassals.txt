@@ -1,0 +1,65 @@
+﻿enable_convert_vassals_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_toggle_convert_vassals.dds"
+	ai_check_interval = 60
+	
+	sort_order = -4
+
+	desc = enable_convert_vassals_decision_desc
+	selection_tooltip = enable_convert_vassals_decision_tooltip
+
+	is_shown = {
+		is_landed = yes
+		NOT = {
+			has_character_flag = wants_to_convert_vassals
+		}
+		any_vassal_or_below = {
+			vassal_can_be_converted = yes
+			count > 0
+		}
+	}
+
+	effect = {
+		custom_tooltip = enable_convert_vassals_decision_effect
+		hidden_effect = {
+			add_character_flag = wants_to_convert_vassals
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+disable_convert_vassals_decision = {
+	picture = "gfx/interface/illustrations/decisions/decision_toggle_convert_vassals.dds"
+	ai_check_interval = 60
+	
+	sort_order = -4
+
+	desc = disable_convert_vassals_decision_desc
+	selection_tooltip = disable_convert_vassals_decision_tooltip
+
+	is_shown = {
+		is_landed = yes
+		has_character_flag = wants_to_convert_vassals
+	}
+
+	effect = {
+		custom_tooltip = disable_convert_vassals_decision_effect
+		hidden_effect = {
+			remove_character_flag = wants_to_convert_vassals
+		}
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}

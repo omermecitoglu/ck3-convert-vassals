@@ -1,0 +1,30 @@
+﻿action_convert_vassals = {
+	combine_into_one = yes
+	priority = 33
+
+	check_create_action = {
+		if = {
+			limit = {
+				has_character_flag = wants_to_convert_vassals
+			}
+			every_vassal_or_below = {
+				limit = {
+					vassal_can_be_converted = yes
+				}
+				try_create_important_action = {
+					important_action_type = action_convert_vassals
+					actor = root
+					recipient = this
+				}
+			}
+		}
+	}
+
+	effect = {
+		open_interaction_window = {
+			interaction = demand_conversion_vassal_ruler_interaction
+			actor = scope:actor
+			recipient = scope:recipient
+		}
+	}
+}
