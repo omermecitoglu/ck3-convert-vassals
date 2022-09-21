@@ -1,0 +1,35 @@
+﻿convert_vassals_toggle_converting_subvassals = {
+	scope = character
+	is_shown = {
+		has_global_variable = ignore_converting_subvassals
+	}
+	effect = {
+		if = {
+			limit = {
+				has_global_variable = ignore_converting_subvassals
+			}
+			remove_global_variable = ignore_converting_subvassals
+		}
+		else = {
+			set_global_variable = ignore_converting_subvassals
+		}
+	}
+}
+
+convert_vassals_toggle_converting_barons = {
+	scope = character
+	is_shown = {
+		has_global_variable = ignore_converting_barons
+	}
+	effect = {
+		if = {
+			limit = {
+				has_global_variable = ignore_converting_barons
+			}
+			remove_global_variable = ignore_converting_barons
+		}
+		else = {
+			set_global_variable = ignore_converting_barons
+		}
+	}
+}

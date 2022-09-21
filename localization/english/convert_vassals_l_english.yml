@@ -19,3 +19,6 @@
   disable_convert_vassals_decision_tooltip: "Disable notifications about vassals who are not [ROOT.Char.GetFaith.GetAdjective|V]"
   disable_convert_vassals_decision_confirm: "Let them worship whatever they want"
   disable_convert_vassals_decision_effect: "#N You won't be notified about vassals who can be converted anymore.#!"
+
+  convert_vassals_widget_ignore_subvassals: "Ignore Subvassals"
+  convert_vassals_widget_ignore_barons: "Ignore Barons & Mayors"

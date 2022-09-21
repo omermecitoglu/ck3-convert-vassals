@@ -14,7 +14,6 @@
 		}
 		any_vassal_or_below = {
 			vassal_can_be_converted = yes
-			count > 0
 		}
 	}
 
@@ -31,6 +30,10 @@
 
 	ai_will_do = {
 		base = 0
+	}
+
+	widget = {
+		gui = "decision_view_widget_convert_vassals"
 	}
 }
 
@@ -61,5 +64,9 @@ disable_convert_vassals_decision = {
 
 	ai_will_do = {
 		base = 0
+	}
+
+	widget = {
+		gui = "decision_view_widget_convert_vassals"
 	}
 }

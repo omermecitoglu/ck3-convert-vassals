@@ -1,0 +1,62 @@
+convert_vassals_widget_main = {}
+
+types ConvertVassalsDecisionWidget
+{
+	type convert_vassals_widget_main = flowcontainer
+	{
+		name = "decision_view_widget_convert_vassals"
+		direction = vertical
+		minimumsize = { 514 -1 }
+		maximumsize = { 514 -1 }
+		ignoreinvisible = yes
+		margin_top = 8
+
+		vbox = {
+			hbox = {
+				vbox = {
+					hbox = {
+						layoutpolicy_horizontal = expanding
+						margin_bottom = 8
+						button_checkbox_label = { # Subvassals
+							datacontext = "[GetScriptedGui('convert_vassals_toggle_converting_subvassals')]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							# tooltip = "you can add some tooltip"
+			
+							blockoverride "checkbox"
+							{
+								checked = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							}
+			
+							blockoverride "text"
+							{
+								text = "convert_vassals_widget_ignore_subvassals"
+							}
+						}
+						expand = {}
+					}
+			
+					hbox = {
+						layoutpolicy_horizontal = expanding
+						margin_bottom = 8
+						button_checkbox_label = { # Barons
+							datacontext = "[GetScriptedGui('convert_vassals_toggle_converting_barons')]"
+							onclick = "[ScriptedGui.Execute( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							# tooltip = "you can add some tooltip"
+			
+							blockoverride "checkbox"
+							{
+								checked = "[ScriptedGui.IsShown( GuiScope.SetRoot( GetPlayer.MakeScope ).End)]"
+							}
+			
+							blockoverride "text"
+							{
+								text = "convert_vassals_widget_ignore_barons"
+							}
+						}
+						expand = {}
+					}
+				}
+			}
+		}
+	}
+}
