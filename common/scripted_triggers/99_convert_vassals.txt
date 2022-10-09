@@ -1,7 +1,7 @@
 ﻿vassal_can_be_converted = {
 	trigger_if = {
 		limit = {
-			root = { has_global_variable = ignore_converting_barons }
+			root = { has_character_flag = ignore_converting_barons }
 		}
 		highest_held_title_tier > tier_barony
 	}

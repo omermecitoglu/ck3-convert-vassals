@@ -10,7 +10,7 @@
 
 			if = {
 				limit = {
-					has_global_variable = ignore_converting_subvassals
+					has_character_flag = ignore_converting_subvassals
 				}
 				every_vassal = {
 					limit = {
