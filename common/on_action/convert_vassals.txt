@@ -1,0 +1,37 @@
+﻿on_death = {
+	on_actions = {
+		convert_vassals_on_death
+	}
+}
+
+convert_vassals_on_death = {
+	trigger = {
+		exists = player_heir
+	}
+	effect = {
+		if = {
+			limit = {
+				has_character_flag = wants_to_convert_vassals
+			}
+			player_heir = {
+				add_character_flag = wants_to_convert_vassals
+			}
+		}
+		if = {
+			limit = {
+				has_character_flag = ignore_converting_subvassals
+			}
+			player_heir = {
+				add_character_flag = ignore_converting_subvassals
+			}
+		}
+		if = {
+			limit = {
+				has_character_flag = ignore_converting_barons
+			}
+			player_heir = {
+				add_character_flag = ignore_converting_barons
+			}
+		}
+	}
+}
